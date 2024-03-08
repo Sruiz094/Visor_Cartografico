@@ -1,5 +1,5 @@
 // Inicializar el mapa
-var map = L.map("map").setView([2.581672, -75.523207],8);
+var map = L.map("map").setView([2.581672, -75.523207],9);
 
 osm = L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
