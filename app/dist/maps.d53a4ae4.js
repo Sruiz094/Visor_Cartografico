@@ -14183,46 +14183,137 @@ var global = arguments[3];
 })));
 
 
-},{}],"index.ts":[function(require,module,exports) {
+},{}],"mapsComponent/logo.ts":[function(require,module,exports) {
 "use strict";
 
-var __importDefault = this && this.__importDefault || function (mod) {
-  return mod && mod.__esModule ? mod : {
-    "default": mod
-  };
-};
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var leaflet_1 = __importDefault(require("leaflet"));
-var mymap = leaflet_1.default.map("map").setView([2.581672, -75.523207], 9);
-var osm = leaflet_1.default.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 20,
-  attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(mymap);
-var Esri_WorldImagery = leaflet_1.default.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-  attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+exports.Logotipo = void 0;
+var leaflet_1 = require("leaflet");
+var logotipo = leaflet_1.Control.extend({
+  options: {
+    position: "topright",
+    img: "https://media.licdn.com/dms/image/C5603AQG065Xv7p3cOg/profile-displayphoto-shrink_400_400/0/1517569390205?e=2147483647&v=beta&t=7NJ_tRaWDOtsLRH4VZUhitbSd29Pz40miTh2wLLc7P8",
+    border: false
+  },
+  initialize: function initialize(options) {
+    leaflet_1.Util.setOptions(this, options);
+  },
+  onAdd: function onAdd() {
+    var img = leaflet_1.DomUtil.create('img');
+    img.src = this.options.img;
+    img.style.width = '45px';
+    if (this.options.border) {
+      img.style.borderBottom = "3px solid white";
+    }
+    return img;
+  }
 });
-var municipio = leaflet_1.default.tileLayer.wms("http://localhost:8081/geoserver/Limites/wms?", {
-  layers: "municipio",
-  format: "image/png",
-  transparent: true
-}).addTo(mymap);
-var departamento = leaflet_1.default.tileLayer.wms("http://localhost:8081/geoserver/Limites/wms?", {
-  layers: "departamento",
-  format: "image/png",
-  transparent: true
-}).addTo(mymap);
+var Logotipo = function Logotipo(options) {
+  return new logotipo(options);
+};
+exports.Logotipo = Logotipo;
+},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js"}],"mapsComponent/mapasBase.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.OpenTopoMap = exports.mapsEsri_WorldImagery = exports.mapsosm = void 0;
+var leaflet_1 = require("leaflet");
+var mapsosm = function mapsosm() {
+  return (0, leaflet_1.tileLayer)('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 20,
+    attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  });
+};
+exports.mapsosm = mapsosm;
+var mapsEsri_WorldImagery = function mapsEsri_WorldImagery() {
+  return (0, leaflet_1.tileLayer)('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    maxZoom: 20,
+    attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+  });
+};
+exports.mapsEsri_WorldImagery = mapsEsri_WorldImagery;
+var OpenTopoMap = function OpenTopoMap() {
+  return (0, leaflet_1.tileLayer)('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+    maxZoom: 20,
+    attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+  });
+};
+exports.OpenTopoMap = OpenTopoMap;
+},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js"}],"mapsComponent/servicioswms.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.departamento = exports.municipio = void 0;
+var leaflet_1 = require("leaflet");
+var municipio = function municipio() {
+  return leaflet_1.tileLayer.wms("http://localhost:8081/geoserver/Limites/wms?", {
+    layers: "municipio",
+    format: "image/png",
+    transparent: true
+  });
+};
+exports.municipio = municipio;
+var departamento = function departamento() {
+  return leaflet_1.tileLayer.wms("http://localhost:8081/geoserver/Limites/wms?", {
+    layers: "departamento",
+    format: "image/png",
+    transparent: true
+  });
+};
+exports.departamento = departamento;
+},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js"}],"mapsComponent/botoncoordenadas.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.coordenadas = void 0;
+var leaflet_1 = require("leaflet");
+var coordenadas = function coordenadas() {
+  return (0, leaflet_1.marker)([2.388826, -75.892439]);
+};
+exports.coordenadas = coordenadas;
+},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js"}],"maps.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var leaflet_1 = require("leaflet");
+var logo_1 = require("./mapsComponent/logo");
+var mapasBase_1 = require("./mapsComponent/mapasBase");
+var servicioswms_1 = require("./mapsComponent/servicioswms");
+var botoncoordenadas_1 = require("./mapsComponent/botoncoordenadas");
+var mymap = (0, leaflet_1.map)("map").setView([2.581672, -75.523207], 9);
+(0, logo_1.Logotipo)().addTo(mymap);
+var Topomap = (0, mapasBase_1.OpenTopoMap)();
+var osm = (0, mapasBase_1.mapsosm)().addTo(mymap);
+var Esri_WorldImagery = (0, mapasBase_1.mapsEsri_WorldImagery)();
+var capaMunicipio = (0, servicioswms_1.municipio)().addTo(mymap);
+var capaDepartamento = (0, servicioswms_1.departamento)().addTo(mymap);
 var baseMaps = {
+  "OpenTopoMap": Topomap,
   "OpenStreetMap": osm,
   "Esri Imagery": Esri_WorldImagery
 };
-var wms = {
-  "departamento": departamento,
-  "municipio": municipio
+var servicioswms = {
+  "departamento": capaDepartamento,
+  "municipio": capaMunicipio
 };
-var panelLimites = leaflet_1.default.control.layers(baseMaps, wms).addTo(mymap);
-},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var controlCapas = leaflet_1.control.layers(baseMaps, servicioswms).addTo(mymap);
+var puntoCoordenada = (0, botoncoordenadas_1.coordenadas)().addTo(mymap);
+mymap.fitBounds([[puntoCoordenada.getLatLng().lat, puntoCoordenada.getLatLng().lng]]);
+puntoCoordenada.on("move", function () {
+  console.log("Coordenada eliminada coordenada");
+  mymap.removeLayer(puntoCoordenada);
+});
+},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js","./mapsComponent/logo":"mapsComponent/logo.ts","./mapsComponent/mapasBase":"mapsComponent/mapasBase.ts","./mapsComponent/servicioswms":"mapsComponent/servicioswms.ts","./mapsComponent/botoncoordenadas":"mapsComponent/botoncoordenadas.ts"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -14247,7 +14338,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41579" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43115" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
@@ -14391,5 +14482,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.ts"], null)
-//# sourceMappingURL=/app.77de5100.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","maps.ts"], null)
+//# sourceMappingURL=/maps.d53a4ae4.js.map
