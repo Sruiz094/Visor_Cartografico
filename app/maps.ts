@@ -1,9 +1,9 @@
 
-import { Control, DomUtil, PosAnimation, control, map, tileLayer, Map, DomEvent} from "leaflet";
+import { Control, DomUtil, PosAnimation, control, map, tileLayer, Map, DomEvent, marker, latLng} from "leaflet";
 import { Logotipo} from "./mapsComponent/logo";
 import { OpenTopoMap, mapsosm, mapsEsri_WorldImagery, } from "./mapsComponent/mapasBase";
 import { departamento, municipio} from "./mapsComponent/servicioswms";
-import { coordenadas } from "./mapsComponent/botoncoordenadas";
+//import { coordenadas } from "./mapsComponent/botoncoordenadas";
 
 
 // Inicializar el mapa
@@ -36,16 +36,34 @@ var servicioswms = {
     "municipio": capaMunicipio
 };
 
-const controlCapas = control.layers(baseMaps, servicioswms).addTo(mymap);
+const controlCapas = control.layers(baseMaps,servicioswms).addTo(mymap);
 
+//Control de escala 
+control.scale().addTo(mymap);
 
 //Selector de capas para mi boton de coordenadas 
-var puntoCoordenada = coordenadas().addTo(mymap);
+//var puntoCoordenada = coordenadas().addTo(mymap);
 
-//Central el mapa con base en las coordenadas ingresadas a traves del boton de coordenadas 
-mymap.fitBounds([[puntoCoordenada.getLatLng().lat, puntoCoordenada.getLatLng().lng]]);
+// Manejar evento del botón para crear marcador de coordenadas
+const crearMarcadorBtn = document.getElementById('btn');
+crearMarcadorBtn.addEventListener('click', () => {
+    const latitudInput = document.getElementById('latitud') as HTMLInputElement;
+    const longitudInput = document.getElementById('longitud') as HTMLInputElement;
+    
+    const latitud = parseFloat(latitudInput.value);
+    const longitud = parseFloat(longitudInput.value);
+    
+    if (!isNaN(latitud) && !isNaN(longitud)) {
+        const coordenadas = latLng(latitud, longitud); 
+        const marcador = marker(coordenadas).addTo(mymap); 
+    } else {
+        alert('Por favor verifique que esten escritas correctamente sus coordenadas en latitud y longitud');
+    }
+});
 
-//Agregando evento para mover marcador 
-puntoCoordenada.on("move", ()=>{
-    console.log("Coordenada eliminada coordenada");
-    mymap.removeLayer(puntoCoordenada);});
+
+
+
+
+
+

@@ -14267,18 +14267,6 @@ var departamento = function departamento() {
   });
 };
 exports.departamento = departamento;
-},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js"}],"mapsComponent/botoncoordenadas.ts":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.coordenadas = void 0;
-var leaflet_1 = require("leaflet");
-var coordenadas = function coordenadas() {
-  return (0, leaflet_1.marker)([2.388826, -75.892439]);
-};
-exports.coordenadas = coordenadas;
 },{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js"}],"maps.ts":[function(require,module,exports) {
 "use strict";
 
@@ -14289,7 +14277,6 @@ var leaflet_1 = require("leaflet");
 var logo_1 = require("./mapsComponent/logo");
 var mapasBase_1 = require("./mapsComponent/mapasBase");
 var servicioswms_1 = require("./mapsComponent/servicioswms");
-var botoncoordenadas_1 = require("./mapsComponent/botoncoordenadas");
 var mymap = (0, leaflet_1.map)("map").setView([2.581672, -75.523207], 9);
 (0, logo_1.Logotipo)().addTo(mymap);
 var Topomap = (0, mapasBase_1.OpenTopoMap)();
@@ -14307,13 +14294,21 @@ var servicioswms = {
   "municipio": capaMunicipio
 };
 var controlCapas = leaflet_1.control.layers(baseMaps, servicioswms).addTo(mymap);
-var puntoCoordenada = (0, botoncoordenadas_1.coordenadas)().addTo(mymap);
-mymap.fitBounds([[puntoCoordenada.getLatLng().lat, puntoCoordenada.getLatLng().lng]]);
-puntoCoordenada.on("move", function () {
-  console.log("Coordenada eliminada coordenada");
-  mymap.removeLayer(puntoCoordenada);
+leaflet_1.control.scale().addTo(mymap);
+var crearMarcadorBtn = document.getElementById('btn');
+crearMarcadorBtn.addEventListener('click', function () {
+  var latitudInput = document.getElementById('latitud');
+  var longitudInput = document.getElementById('longitud');
+  var latitud = parseFloat(latitudInput.value);
+  var longitud = parseFloat(longitudInput.value);
+  if (!isNaN(latitud) && !isNaN(longitud)) {
+    var coordenadas = (0, leaflet_1.latLng)(latitud, longitud);
+    var marcador = (0, leaflet_1.marker)(coordenadas).addTo(mymap);
+  } else {
+    alert('Por favor verifique que esten escritas correctamente sus coordenadas en latitud y longitud');
+  }
 });
-},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js","./mapsComponent/logo":"mapsComponent/logo.ts","./mapsComponent/mapasBase":"mapsComponent/mapasBase.ts","./mapsComponent/servicioswms":"mapsComponent/servicioswms.ts","./mapsComponent/botoncoordenadas":"mapsComponent/botoncoordenadas.ts"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js","./mapsComponent/logo":"mapsComponent/logo.ts","./mapsComponent/mapasBase":"mapsComponent/mapasBase.ts","./mapsComponent/servicioswms":"mapsComponent/servicioswms.ts"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -14338,7 +14333,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43115" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41307" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
