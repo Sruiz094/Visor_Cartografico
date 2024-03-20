@@ -20,23 +20,31 @@
             height: 100%;
             width: 100vw;
         }
+        .search{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
     </style>
     
-    </head>
-    
 </head>
+
 <body>
     <!-- Creamos el contenedor del mapa -->
     <div id="map"></div>
     <script src="./maps.ts"> </script>
+    <!-- <button id="printButton">Imprimir Mapa</button> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     
+
     <!-- Creación del botón para la localización de cartografía por coordenadas -->
-    <a href="#" id= "btn" class="btn-flotante">Busqueda por coordendas</a>
-    <form id="form-coordenadas" style="display: none;">
-        <label for="latitud">Latitud:</label>
-        <input type="text" id="latitud" name="latitud"><br>
-        <label for="longitud">Longitud:</label>
-        <input type="text" id="longitud" name="longitud"><br>
-        <button type="submit">Buscar</button>
-    </form>     
+    <!-- <a href="#" id= "btn" class="btn-flotante">Busqueda por coordendas</a> -->
+
+     <div class="leaflet-control search">
+        <input type="text" id="search" placeholder="Lat, Lng">
+        <button id="search-btn">Coordenadas</button>
+    </div> 
+    
+
 </html>

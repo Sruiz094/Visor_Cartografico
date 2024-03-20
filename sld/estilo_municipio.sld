@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" version="1.1.0" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1.0" xmlns:ogc="http://www.opengis.net/ogc" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se">
   <NamedLayer>
     <se:Name>municipio</se:Name>
     <UserStyle>
@@ -18,12 +18,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#c8b36c</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#71a7d4</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -42,12 +42,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#d838d3</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#d8e16f</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -66,12 +66,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#646ce9</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#5fd033</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -90,12 +90,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#c2e64a</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#3cda8b</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -114,12 +114,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#ef49b5</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#ec595b</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -138,12 +138,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#80d55e</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#4e3de0</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -162,12 +162,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#470fee</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#676eda</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -186,12 +186,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#e7d90f</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#c4ed48</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -210,12 +210,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#50f0b8</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#7ad06f</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -234,12 +234,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#9d3ee6</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#32a5d6</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -258,12 +258,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#c33ad5</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#72cdcb</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -282,12 +282,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#ef5841</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#18d596</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -306,12 +306,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#2dc6dd</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#3bd540</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -330,12 +330,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#cc373a</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#9b86dc</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -354,12 +354,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#3075e3</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#d53f71</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -378,12 +378,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#d242b5</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#e077bb</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -402,12 +402,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#cadb0f</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#43e461</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -426,12 +426,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#47df30</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#cf10c5</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -450,12 +450,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#da1c5b</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#dd586e</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -474,12 +474,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#8079cd</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#efcd5f</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -498,12 +498,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#ce8d24</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#c88366</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -522,12 +522,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#c46ae7</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#ec842a</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -546,12 +546,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#9f77db</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#a135c8</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -570,12 +570,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#ea80b3</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#eb5940</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -594,12 +594,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#63b4d7</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#e9991a</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -618,12 +618,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#75cac7</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#b1de6d</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -642,12 +642,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#18ee1f</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#b418c8</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -666,12 +666,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#5fd875</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#1140e9</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -690,12 +690,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#59d4bd</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#af81ef</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -714,12 +714,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#db815a</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#4bd1e5</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -738,12 +738,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#86de3f</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#80e731</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -762,12 +762,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#cc3b56</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#68db90</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -786,12 +786,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#69edab</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#73a1f0</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -810,12 +810,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#bde680</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#dbd030</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -834,12 +834,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#2bdd6a</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#6ce4ce</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -858,12 +858,12 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#e9791e</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#d72279</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
@@ -882,18 +882,20 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#4c69d3</se:SvgParameter>
-              <se:SvgParameter name="fill-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="fill">#d75abe</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0.53</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#232323</se:SvgParameter>
-              <se:SvgParameter name="stroke-opacity">0.47</se:SvgParameter>
+              <se:SvgParameter name="stroke-opacity">0.53</se:SvgParameter>
               <se:SvgParameter name="stroke-width">1</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
             </se:Stroke>
           </se:PolygonSymbolizer>
         </se:Rule>
         <se:Rule>
+          <se:MinScaleDenominator>10000</se:MinScaleDenominator>
+          <se:MaxScaleDenominator>0</se:MaxScaleDenominator>
           <se:TextSymbolizer>
             <se:Label>
               <ogc:PropertyName>mpnombre</ogc:PropertyName>

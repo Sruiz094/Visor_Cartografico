@@ -14249,7 +14249,7 @@ exports.OpenTopoMap = OpenTopoMap;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.departamento = exports.municipio = void 0;
+exports.UsoSueloRural = exports.UsoSueloUrbano = exports.departamento = exports.municipio = void 0;
 var leaflet_1 = require("leaflet");
 var municipio = function municipio() {
   return leaflet_1.tileLayer.wms("http://localhost:8081/geoserver/Limites/wms?", {
@@ -14267,6 +14267,78 @@ var departamento = function departamento() {
   });
 };
 exports.departamento = departamento;
+var UsoSueloUrbano = function UsoSueloUrbano() {
+  return leaflet_1.tileLayer.wms("http://localhost:8081/geoserver/UsoSueloPOT/wms?", {
+    layers: "UsoSueloUrbano_LaPlata",
+    format: "image/png",
+    transparent: true
+  });
+};
+exports.UsoSueloUrbano = UsoSueloUrbano;
+var UsoSueloRural = function UsoSueloRural() {
+  return leaflet_1.tileLayer.wms("http://localhost:8081/geoserver/UsoSueloPOT/wms?", {
+    layers: "UsoSueloRural_LaPlata",
+    format: "image/png",
+    transparent: true
+  });
+};
+exports.UsoSueloRural = UsoSueloRural;
+},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js"}],"mapsComponent/leyenda.ts":[function(require,module,exports) {
+"use strict";
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.addLegendControl = void 0;
+var leaflet_1 = require("leaflet");
+function addLegendControl(map, servicioswms) {
+  var legend = new leaflet_1.Control({
+    position: 'bottomleft'
+  });
+  legend.onAdd = function (map) {
+    var div = leaflet_1.DomUtil.create('div', 'info legend');
+    function updateLegend() {
+      div.innerHTML = '';
+      var activeLayers = [];
+      for (var _i = 0, _Object$entries = Object.entries(servicioswms); _i < _Object$entries.length; _i++) {
+        var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
+          layerName = _Object$entries$_i[0],
+          layer = _Object$entries$_i[1];
+        if (map.hasLayer(layer)) {
+          activeLayers.push(layerName);
+        }
+      }
+      if (activeLayers.length > 0) {
+        div.innerHTML += '<h3 style="background-color: white; padding: 5px;">LEYENDA</h3>';
+        var _iterator = _createForOfIteratorHelper(activeLayers),
+          _step;
+        try {
+          for (_iterator.s(); !(_step = _iterator.n()).done;) {
+            var _layerName = _step.value;
+            div.innerHTML += "<div style=\"margin-bottom: 0px;\">\n                            <img alt=\"".concat(_layerName, "\" src=\"http://localhost:8081/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=").concat(_layerName, "\" style=\"width: 500; height: 500;\" />\n                        </div>");
+          }
+        } catch (err) {
+          _iterator.e(err);
+        } finally {
+          _iterator.f();
+        }
+      }
+    }
+    map.on('overlayadd', updateLegend);
+    map.on('overlayremove', updateLegend);
+    updateLegend();
+    return div;
+  };
+  legend.addTo(map);
+}
+exports.addLegendControl = addLegendControl;
 },{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js"}],"maps.ts":[function(require,module,exports) {
 "use strict";
 
@@ -14277,13 +14349,16 @@ var leaflet_1 = require("leaflet");
 var logo_1 = require("./mapsComponent/logo");
 var mapasBase_1 = require("./mapsComponent/mapasBase");
 var servicioswms_1 = require("./mapsComponent/servicioswms");
+var leyenda_1 = require("./mapsComponent/leyenda");
 var mymap = (0, leaflet_1.map)("map").setView([2.581672, -75.523207], 9);
 (0, logo_1.Logotipo)().addTo(mymap);
 var Topomap = (0, mapasBase_1.OpenTopoMap)();
 var osm = (0, mapasBase_1.mapsosm)().addTo(mymap);
 var Esri_WorldImagery = (0, mapasBase_1.mapsEsri_WorldImagery)();
 var capaMunicipio = (0, servicioswms_1.municipio)().addTo(mymap);
-var capaDepartamento = (0, servicioswms_1.departamento)().addTo(mymap);
+var capaDepartamento = (0, servicioswms_1.departamento)();
+var capaUsoSueloUrbano_LaPlata = (0, servicioswms_1.UsoSueloUrbano)();
+var capaUsoSueloRural_LaPlata = (0, servicioswms_1.UsoSueloRural)();
 var baseMaps = {
   "OpenTopoMap": Topomap,
   "OpenStreetMap": osm,
@@ -14291,24 +14366,16 @@ var baseMaps = {
 };
 var servicioswms = {
   "departamento": capaDepartamento,
-  "municipio": capaMunicipio
+  "municipio": capaMunicipio,
+  "UsoSueloUrbano_LaPlata": capaUsoSueloUrbano_LaPlata,
+  "UsoSueloRural_LaPlata": capaUsoSueloRural_LaPlata
 };
 var controlCapas = leaflet_1.control.layers(baseMaps, servicioswms).addTo(mymap);
-leaflet_1.control.scale().addTo(mymap);
-var crearMarcadorBtn = document.getElementById('btn');
-crearMarcadorBtn.addEventListener('click', function () {
-  var latitudInput = document.getElementById('latitud');
-  var longitudInput = document.getElementById('longitud');
-  var latitud = parseFloat(latitudInput.value);
-  var longitud = parseFloat(longitudInput.value);
-  if (!isNaN(latitud) && !isNaN(longitud)) {
-    var coordenadas = (0, leaflet_1.latLng)(latitud, longitud);
-    var marcador = (0, leaflet_1.marker)(coordenadas).addTo(mymap);
-  } else {
-    alert('Por favor verifique que esten escritas correctamente sus coordenadas en latitud y longitud');
-  }
-});
-},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js","./mapsComponent/logo":"mapsComponent/logo.ts","./mapsComponent/mapasBase":"mapsComponent/mapasBase.ts","./mapsComponent/servicioswms":"mapsComponent/servicioswms.ts"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+leaflet_1.control.scale({
+  position: 'bottomright'
+}).addTo(mymap);
+(0, leyenda_1.addLegendControl)(mymap, servicioswms);
+},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js","./mapsComponent/logo":"mapsComponent/logo.ts","./mapsComponent/mapasBase":"mapsComponent/mapasBase.ts","./mapsComponent/servicioswms":"mapsComponent/servicioswms.ts","./mapsComponent/leyenda":"mapsComponent/leyenda.ts"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -14333,7 +14400,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41307" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44593" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

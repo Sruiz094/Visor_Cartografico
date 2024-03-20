@@ -1,0 +1,37 @@
+{
+  "name": "geoportal",
+  "version": "1.0.0",
+  "description": "Proyecto creacion de geoportal con geoserver y leaflet",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx parcel ./index.html --open",
+    "build": "npx parcel build index.html --public-url '.'"
+  },
+  "keywords": [
+    "leaflet",
+    "typescript",
+    "maps",
+    "mapas",
+    "geojson",
+    "colombia",
+    "huila",
+    "avalúos",
+    "sig",
+    "gis",
+    "qgis",
+    "geoserver"
+  ],
+  "author": "Jhon Sebastián Ruiz Mosquera, Edward Duván Atehortua Sánchez <jhonruiz094@gmail.com>, <edward.duvan.atehortua@gmail.com>",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "leaflet": "^1.7.1",
+    "pg": "^8.11.3",
+    "typescript": "4.4"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.29",
+    "@types/leaflet": "^1.9.8",
+    "@types/pg": "^8.11.2",
+    "parcel-bundler": "^1.12.5"
+  }
+}
