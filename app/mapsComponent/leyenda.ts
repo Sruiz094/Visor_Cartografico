@@ -11,7 +11,7 @@ export function addLegendControl(map: Map, servicioswms: {[key: string]: any}) {
 
             const activeLayers: string[] = [];
             for (const [layerName, layer] of Object.entries(servicioswms)) {
-                if (map.hasLayer(layer)) {
+                if (map.hasLayer(layer) && layerName !== "municipio") { // Exclude "municipio" layer
                     activeLayers.push(layerName);
                 }
             }
@@ -22,7 +22,7 @@ export function addLegendControl(map: Map, servicioswms: {[key: string]: any}) {
                 for (const layerName of activeLayers) {
                     div.innerHTML +=
                         `<div style="margin-bottom: 0px;">
-                            <img alt="${layerName}" src="http://localhost:8081/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=${layerName}" style="width: 500; height: 500;" />
+                            <img alt="${layerName}" src="http://localhost:8081/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=${layerName}" style="width: 100; height: 100;" />
                         </div>`;
                 }
             }

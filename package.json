@@ -24,7 +24,9 @@
   "author": "Jhon Sebastián Ruiz Mosquera, Edward Duván Atehortua Sánchez <jhonruiz094@gmail.com>, <edward.duvan.atehortua@gmail.com>",
   "license": "PROPRIETARY",
   "dependencies": {
+    "jquery": "^3.7.1",
     "leaflet": "^1.7.1",
+    "leaflet.browser.print": "^2.0.2",
     "pg": "^8.11.3",
     "typescript": "4.4"
   },

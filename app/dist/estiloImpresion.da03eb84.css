@@ -1,0 +1,29 @@
+@media print {
+    /* Ocultar elementos que no deseas imprimir */
+    body * {
+        visibility: hidden;
+    }
+    #map, #map * {
+        visibility: visible;
+    }
+
+    /* Establecer estilos para el mapa */
+    #map {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%; /* Ajustar el ancho al 100% del área imprimible */
+        height: 100%; /* Ajustar la altura al 100% del área imprimible */
+        margin: 0; /* Asegurar que no haya margen */
+        padding: 0; /* Asegurar que no haya relleno */
+    }
+
+    /* Centrar y escalar el mapa */
+    @page {
+        size: auto; /* Utilizar el tamaño de página automático */
+        margin: 0; /* Asegurar que no haya margen */
+    }
+}
+
+
+/*# sourceMappingURL=/estiloImpresion.da03eb84.css.map */

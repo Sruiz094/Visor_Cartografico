@@ -1,0 +1,28 @@
+/* Estilos para el contenedor de la leyenda */
+.legend-container {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    max-width: 300px; /* Ajusta el ancho máximo de la leyenda */
+    overflow-y: auto; /* Agrega un scroll vertical si la leyenda es demasiado larga */
+}
+
+/* Estilos para el título de la leyenda */
+.legend-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Estilos para cada ítem de la leyenda */
+.legend-item {
+    margin-bottom: 5px;
+}
+
+/* Estilos para las imágenes dentro de la leyenda */
+.legend-item img {
+    max-width: 100%; /* Ajusta el tamaño máximo de las imágenes */
+    height: auto;
+}
+
+
+/*# sourceMappingURL=/leyenda.74677be2.css.map */

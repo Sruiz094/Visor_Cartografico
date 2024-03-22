@@ -1,20 +1,22 @@
-import { control, map,} from "leaflet";
+import { control, Map, marker, LatLngBounds, latLngBounds } from "leaflet";
 import { Logotipo} from "./mapsComponent/logo";
-import { OpenTopoMap, mapsosm, mapsEsri_WorldImagery, } from "./mapsComponent/mapasBase";
+import { OpenTopoMap, mapsosm, mapsEsri_WorldImagery, mapsGoogleMaps, mapsGoogleSatellite,} from "./mapsComponent/mapasBase";
 import { departamento, municipio,UsoSueloRural, UsoSueloUrbano} from "./mapsComponent/servicioswms";
-import {addLegendControl} from "./mapsComponent/leyenda"
-// Inicializar el mapa
-const mymap = map("map").setView([2.581672, -75.523207],9);
+import { addLegendControl} from "./mapsComponent/leyenda"
+import { botonCoordenadas } from "./mapsComponent/botonCoordenadas";
 
+// Inicializar el mapa
+const mymap = new Map("map").setView([2.581672, -75.523207],8);
 
 //Importación del logotipo de la empresa  
 Logotipo().addTo(mymap); 
-
 
 //Importación de mapas base 
 const Topomap = OpenTopoMap();
 const osm = mapsosm().addTo(mymap);
 const Esri_WorldImagery = mapsEsri_WorldImagery();
+const GoogleMaps = mapsGoogleMaps();
+const GoogleSatellite = mapsGoogleSatellite();
 
 //Enlazar servicios wms
 const capaMunicipio = municipio().addTo(mymap);
@@ -28,15 +30,15 @@ var baseMaps = {
     "OpenTopoMap": Topomap,
     "OpenStreetMap": osm,
     "Esri Imagery": Esri_WorldImagery,  
+    "Google Maps": GoogleMaps,
+    "Google Satellite": GoogleSatellite,
 };
-
 var servicioswms = {
     "departamento": capaDepartamento,
     "municipio": capaMunicipio,
     "UsoSueloUrbano_LaPlata": capaUsoSueloUrbano_LaPlata,
     "UsoSueloRural_LaPlata": capaUsoSueloRural_LaPlata,
 };
-
 const controlCapas = control.layers(baseMaps,servicioswms).addTo(mymap);
 
 //Control de escala 
@@ -44,4 +46,10 @@ control.scale({ position: 'bottomright' }).addTo(mymap);
 
 //Añadir leyenda 
 addLegendControl(mymap, servicioswms);
+
+// Crea un marcador inicialmente en [0, 0]
+var marcador = marker([0, 0]).addTo(mymap);
+
+// Configurar el botón de búsqueda
+botonCoordenadas(mymap);
 

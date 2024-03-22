@@ -5,17 +5,31 @@ export const mapsosm = ()=>{
     return tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 20,
     attribution: 
-    'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    'OpenStreetMap'
 })};
 
 export const mapsEsri_WorldImagery = () =>{
     return tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     maxZoom: 20,
-	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+	attribution: 'Esri'
 })};
 
 export const OpenTopoMap = ()=> {
     return tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
 	    maxZoom: 20,
-	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+	attribution: 'OpenStreetMap'
 })};
+
+export const mapsGoogleMaps = () => {
+    return tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        attribution: 'Google Maps'
+    });
+};
+
+export const mapsGoogleSatellite = () => {
+    return tileLayer('https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        attribution: 'Google Satellite'
+    });
+};
