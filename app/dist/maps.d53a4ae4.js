@@ -14263,8 +14263,32 @@ exports.mapsGoogleSatellite = mapsGoogleSatellite;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.UsoSueloRural = exports.UsoSueloUrbano = exports.departamento = exports.municipio = void 0;
+exports.UsoSueloUrbano_Pital = exports.UsoSueloRural_LaArgentina = exports.UsoSueloUrbano_LaArgentina = exports.UsoSueloRural_LaPlata = exports.UsoSueloUrbano_LaPlata = exports.AreasProtegidas = exports.departamento = exports.municipio = exports.represa = exports.drenaje = exports.vias = void 0;
 var leaflet_1 = require("leaflet");
+var vias = function vias() {
+  return leaflet_1.tileLayer.wms("http://localhost:8081/geoserver/CartoBase/wms?", {
+    layers: "Vias",
+    format: "image/png",
+    transparent: true
+  });
+};
+exports.vias = vias;
+var drenaje = function drenaje() {
+  return leaflet_1.tileLayer.wms("http://localhost:8081/geoserver/CartoBase/wms?", {
+    layers: "Drenaje_Sencillo",
+    format: "image/png",
+    transparent: true
+  });
+};
+exports.drenaje = drenaje;
+var represa = function represa() {
+  return leaflet_1.tileLayer.wms("http://localhost:8081/geoserver/CartoBase/wms?", {
+    layers: "Represa",
+    format: "image/png",
+    transparent: true
+  });
+};
+exports.represa = represa;
 var municipio = function municipio() {
   return leaflet_1.tileLayer.wms("http://localhost:8081/geoserver/Limites/wms?", {
     layers: "municipio",
@@ -14281,22 +14305,54 @@ var departamento = function departamento() {
   });
 };
 exports.departamento = departamento;
-var UsoSueloUrbano = function UsoSueloUrbano() {
-  return leaflet_1.tileLayer.wms("http://localhost:8081/geoserver/UsoSueloPOT/wms?", {
+var AreasProtegidas = function AreasProtegidas() {
+  return leaflet_1.tileLayer.wms("http://localhost:8081/geoserver/Ambiental/wms?", {
+    layers: "AreasProtegidas",
+    format: "image/png",
+    transparent: true
+  });
+};
+exports.AreasProtegidas = AreasProtegidas;
+var UsoSueloUrbano_LaPlata = function UsoSueloUrbano_LaPlata() {
+  return leaflet_1.tileLayer.wms("http://localhost:8081/geoserver/POT/wms?", {
     layers: "UsoSueloUrbano_LaPlata",
     format: "image/png",
     transparent: true
   });
 };
-exports.UsoSueloUrbano = UsoSueloUrbano;
-var UsoSueloRural = function UsoSueloRural() {
-  return leaflet_1.tileLayer.wms("http://localhost:8081/geoserver/UsoSueloPOT/wms?", {
+exports.UsoSueloUrbano_LaPlata = UsoSueloUrbano_LaPlata;
+var UsoSueloRural_LaPlata = function UsoSueloRural_LaPlata() {
+  return leaflet_1.tileLayer.wms("http://localhost:8081/geoserver/POT/wms?", {
     layers: "UsoSueloRural_LaPlata",
     format: "image/png",
     transparent: true
   });
 };
-exports.UsoSueloRural = UsoSueloRural;
+exports.UsoSueloRural_LaPlata = UsoSueloRural_LaPlata;
+var UsoSueloUrbano_LaArgentina = function UsoSueloUrbano_LaArgentina() {
+  return leaflet_1.tileLayer.wms("http://localhost:8081/geoserver/POT/wms?", {
+    layers: "UsoSueloUrbano_LaArgentina",
+    format: "image/png",
+    transparent: true
+  });
+};
+exports.UsoSueloUrbano_LaArgentina = UsoSueloUrbano_LaArgentina;
+var UsoSueloRural_LaArgentina = function UsoSueloRural_LaArgentina() {
+  return leaflet_1.tileLayer.wms("http://localhost:8081/geoserver/POT/wms?", {
+    layers: "UsoSueloRural_LaArgentina",
+    format: "image/png",
+    transparent: true
+  });
+};
+exports.UsoSueloRural_LaArgentina = UsoSueloRural_LaArgentina;
+var UsoSueloUrbano_Pital = function UsoSueloUrbano_Pital() {
+  return leaflet_1.tileLayer.wms("http://localhost:8081/geoserver/POT/wms?", {
+    layers: "UsoSueloUrbano_Pital",
+    format: "image/png",
+    transparent: true
+  });
+};
+exports.UsoSueloUrbano_Pital = UsoSueloUrbano_Pital;
 },{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js"}],"mapsComponent/leyenda.ts":[function(require,module,exports) {
 "use strict";
 
@@ -25313,10 +25369,17 @@ var osm = (0, mapasBase_1.mapsosm)().addTo(mymap);
 var Esri_WorldImagery = (0, mapasBase_1.mapsEsri_WorldImagery)();
 var GoogleMaps = (0, mapasBase_1.mapsGoogleMaps)();
 var GoogleSatellite = (0, mapasBase_1.mapsGoogleSatellite)();
+var capavias = (0, servicioswms_1.vias)();
+var capadrenaje = (0, servicioswms_1.drenaje)();
+var caparepresa = (0, servicioswms_1.represa)();
 var capaMunicipio = (0, servicioswms_1.municipio)().addTo(mymap);
 var capaDepartamento = (0, servicioswms_1.departamento)();
-var capaUsoSueloUrbano_LaPlata = (0, servicioswms_1.UsoSueloUrbano)();
-var capaUsoSueloRural_LaPlata = (0, servicioswms_1.UsoSueloRural)();
+var capaAreasProtegidas = (0, servicioswms_1.AreasProtegidas)();
+var capaUsoSueloUrbano_LaPlata = (0, servicioswms_1.UsoSueloUrbano_LaPlata)();
+var capaUsoSueloRural_LaPlata = (0, servicioswms_1.UsoSueloRural_LaPlata)();
+var capaUsoSueloUrbano_LaArgentina = (0, servicioswms_1.UsoSueloUrbano_LaArgentina)();
+var capaUsoSueloRural_LaArgentina = (0, servicioswms_1.UsoSueloRural_LaArgentina)();
+var capaUsoSueloUrbano_Pital = (0, servicioswms_1.UsoSueloUrbano_Pital)();
 var baseMaps = {
   "OpenTopoMap": Topomap,
   "OpenStreetMap": osm,
@@ -25325,10 +25388,17 @@ var baseMaps = {
   "Google Satellite": GoogleSatellite
 };
 var servicioswms = {
-  "departamento": capaDepartamento,
+  "vias": capavias,
+  "drenajes": capadrenaje,
+  "represa": caparepresa,
   "municipio": capaMunicipio,
+  "departamento": capaDepartamento,
+  "AreasProtegidas": capaAreasProtegidas,
   "UsoSueloUrbano_LaPlata": capaUsoSueloUrbano_LaPlata,
-  "UsoSueloRural_LaPlata": capaUsoSueloRural_LaPlata
+  "UsoSueloRural_LaPlata": capaUsoSueloRural_LaPlata,
+  "UsoSueloUrbano_LaArgentina": capaUsoSueloUrbano_LaArgentina,
+  "UsoSueloRural_LaArgentina": capaUsoSueloRural_LaArgentina,
+  "UsoSueloUrbano_Pital": capaUsoSueloUrbano_Pital
 };
 var controlCapas = leaflet_1.control.layers(baseMaps, servicioswms).addTo(mymap);
 leaflet_1.control.scale({
@@ -25362,7 +25432,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42841" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39719" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
